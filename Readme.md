@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Мария Панежина](https://up.htmlacademy.ru/adaptive/23/user/1289785).
-* Наставник: [Ольга ВадясоваНеизвестно](https://htmlacademy.ru/profile/ad0v0)
+* Наставник: [Ольга Вадясова](https://htmlacademy.ru/profile/ad0v0)
 
 ---
 
