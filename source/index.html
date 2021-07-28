@@ -51,12 +51,12 @@
         <div class="catalog-nav__wrapper">
           <ul class="catalog-nav__list">
             <li class="catalog-nav__item">
-              <a class="catalog-nav__interior-items--main-theme" href="#">
+              <a class="catalog-nav__item__interier" href="#">
                 Предметы интерьера
               </a>
             </li>
             <li class="catalog-nav__item">
-              <a class="catalog-nav__toy-items--main-theme" href="#">
+              <a class="catalog-nav__item__toys" href="#">
                 Детские игрушки
               </a>
             </li>
@@ -85,7 +85,7 @@
               <dd class="promo__property-height__value">15 см</dd>
             </div>
           </dl>
-          <img class="promo__photo" src="img/knitted baskets.jpg" width="260" height="315" alt="Набор вязаных корзин">
+          <img class="promo__photo" src="img/knitted-baskets.jpg" width="260" height="315" alt="Набор вязаных корзин">
           <div class="promo__property-item promo__property-item--price">
             <p>Цена: 990 руб.</p>
           </div>
@@ -219,7 +219,8 @@
         <div class="modal__wrapper">
           <p class="title modal__title">Добавить в корзину</p>
           <form class="filter" method="POST" action="#">
-            <legend class="title modal__title modal__title--small-size">Выберите размер:</legend>
+            <fieldset>
+              <legend class="title modal__title modal__title--small-size">Выберите размер:</legend>
             <ul class="modal__size-list">
               <li class="modal__item modal__item--h-size">
                 <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="h-size" id="h-size" checked>
@@ -234,6 +235,7 @@
                 <label class="filter__checkbox-lable" for="l-size">L</label>
               </li>
             </ul>
+            </fieldset>
             <button class="button modal__button" type="submit">Добавить</button>
           </form>
         </div>
