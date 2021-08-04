@@ -1,28 +1,48 @@
-<div class="modal">
-  <div class="modal__add-order">
-    <div class="modal__wrapper">
-      <p class="title modal__title">Добавить в корзину</p>
-      <form class="filter" method="POST" action="#">
-        <fieldset class="filter">
-          <legend class="filter-legend">Выберите размер:</legend>
-          <ul class="filter__list">
-            <li class="modal__item modal__item--h-size">
-              <input class="filter__input filter__input-radio filter__input" type="radio" name="size" id="h-size"
-                checked>
-              <label class="filter__lable filter__radio-lable" for="h-size">H</label>
-            </li>
-            <li class="filter__item modal__item--m-size">
-              <input class="filter__input filter__input-radio filter__input" type="radio" name="size" id="m-size">
-              <label class="filter__lable filter__radio-lable" for="m-size">M</label>
-            </li>
-            <li class="filter__item modal__item--l-size">
-              <input class="filter__input filter__input-radio filter__input" type="radio" name="size" id="l-size">
-              <label class="filter__lable filter__radio-lable" for="l-size">L</label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="button modal__button" type="submit">Добавить</button>
-      </form>
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Выбор размера и добавление в корзину</title>
+</head>
+
+<body class="page__body">
+  <header class="page__header">
+  </header>
+
+  <main>
+    <div class="modal">
+      <div class="modal__add-order">
+        <div class="modal__wrapper">
+          <p class="title modal__title">Добавить в корзину</p>
+          <form class="filter" method="POST" action="#">
+            <fieldset class="filter">
+              <legend class="filter-legend">Выберите размер:</legend>
+              <ul class="filter__list">
+                <li class="filter__item filter__item--h-size">
+                  <input class="filter__input filter__input-radio filter__input" type="radio" name="size" id="h-size"
+                    checked>
+                  <label class="filter__lable filter__radio-lable" for="h-size">H</label>
+                </li>
+                <li class="filter__item filter__item--m-size">
+                  <input class="filter__input filter__input-radio filter__input" type="radio" name="size" id="m-size">
+                  <label class="filter__lable filter__radio-lable" for="m-size">M</label>
+                </li>
+                <li class="filter__item filter__item--l-size">
+                  <input class="filter__input filter__input-radio filter__input" type="radio" name="size" id="l-size">
+                  <label class="filter__lable filter__radio-lable" for="l-size">L</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button modal__button" type="submit">Добавить</button>
+          </form>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </main>
+
+  <footer>
+  </footer>
+</body>
+
+</html>
