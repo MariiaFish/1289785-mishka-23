@@ -61,11 +61,11 @@
           <legend class="form__fieldset-legend">Тип</legend>
           <ul class="form__list">
             <li class="form__item">
-              <input class="form__radio-button" type="radio" name="type" id="interior-accessories" checked>
+              <input class="form__radio-input" type="radio" name="type" id="interior-accessories" checked>
               <label class="form__radio-lable" for="interior-accessories">Аксессуар для интерьера</label>
             </li>
             <li class="form__item">
-              <input class="form__radio-button" type="radio" name="type" id="children-toy">
+              <input class="form__radio-input" type="radio" name="type" id="children-toy">
               <label class="form__radio-lable" for="children-toy">Детская игрушка</label>
             </li>
           </ul>
@@ -118,20 +118,23 @@
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__fieldset-legend">тел</legend>
-          <label class="form__lable">
+          <label class="form__lable visually-hidden">
             <input class="form__input" type="tel" name="phone-number" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+            тел
           </label>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__fieldset-legend">e-mail</legend>
-          <label class="form__lable">
+          <label class="form__lable visually-hidden">
             <input class="form__input" type="email" name="e-mail" placeholder="Ваш Email*">
+            e-mail
           </label>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__fieldset-legend">доп</legend>
-          <label class="form__lable">
+          <label class="form__lable visually-hidden">
             <textarea class="form__textarea" name="additional" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            доп
           </label>
         </fieldset>
         <button class="button form__button" type="submit">Отправить заказ</button>
@@ -144,20 +147,17 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="#"
-              aria-label="Переход на страницу магазина «Мишка» в instagram">
+            <a class="social__link social__link--instagram" href="#" aria-label="Переход на страницу магазина «Мишка» в instagram">
               <img class="social__icon" src="img/instagramm.png" width="22" height="21" alt="Логотип instagram">
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="#"
-              aria-label="Переход на страницу магазина «Мишка» в facebook">
+            <a class="social__link social__link--facebook" href="#" aria-label="Переход на страницу магазина «Мишка» в facebook">
               <img class="social__icon" src="img/fb.png" width="15" height="28" alt="Логотип facebook">
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="#"
-              aria-label="Переход на страницу магазина «Мишка» в twitter">
+            <a class="social__link social__link--twitter" href="#" aria-label="Переход на страницу магазина «Мишка» в twitter">
               <img class="social__icon" src="img/twitter.png" width="23" height="20" alt="Логотип twitter">
             </a>
           </li>
@@ -165,9 +165,8 @@
       </div>
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__icon" src="img/htmlacademy-logo.svg" width="27" height="35"
-            alt="Переход на страницу интенсива «Адаптивная верстка и автоматизация» htmlacademy">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на страницу интенсива «Адаптивная верстка и автоматизация» htmlacademy">
+          <img class="copyright__icon" src="img/htmlacademy-logo.svg" width="27" height="35" alt="Логотип HTMLAcademy">
         </a>
       </div>
     </div>
