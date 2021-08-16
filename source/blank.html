@@ -4,22 +4,23 @@
 <head>
   <meta charset="utf-8">
   <title>Страница не найдена</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="page__body">
+<body class="page__body grid grid__body">
   <header class="page__header">
-    <a class="page__logo" href="index.html" aria-label="Переход на главную страницу">
+    <a class="link page__logo" href="index.html" aria-label="Переход на главную страницу">
       <img src="img/mishka-logo.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
+        <ul class="list main-nav__list">
           <li class="main-nav__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="main-nav__item main-nav__item--search">
             <form class="search-form" action="#" method="GET">
@@ -33,7 +34,7 @@
             </form>
           </li>
           <li class="main-nav__item main-nav__item--cart">
-            <a href="#">
+            <a class="link" href="#">
               <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.2"
                   d="M20.1884 6.85716H16.6377L13.1884 0.380944C12.9855 -8.61287e-06 12.5797 -0.0952351 12.1739 0.0952412C11.7681 0.285717 11.6667 0.66667 11.8696 1.04762L15.0145 6.85716H5.7826L8.92753 1.04762C9.13043 0.66667 8.92754 0.285717 8.6232 0.0952412C8.2174 -0.0952351 7.8116 0.0952295 7.6087 0.380944L4.1594 6.85716H0.811583C0.405785 6.85716 0 7.14286 0 7.61905C0 8 0.304336 8.38094 0.811583 8.38094H1.01449L1.92753 11.2381C1.72463 11.3333 1.62317 11.5238 1.62317 11.8095C1.62317 12.1905 1.92753 12.4762 2.33332 12.4762L4.05797 18H16.942L18.6667 12.4762C19.0725 12.4762 19.3768 12.1905 19.3768 11.8095C19.3768 11.619 19.2754 11.3333 19.0725 11.2381L19.9855 8.38094H20.1884C20.5942 8.38094 21 8.09524 21 7.61905C21 7.14286 20.5942 6.85716 20.1884 6.85716ZM15.6232 16.4762H5.07247L3.85506 12.381H16.942L15.6232 16.4762ZM17.2464 10.9524H3.34782L2.53623 8.28573H18.058L17.2464 10.9524Z"
@@ -54,21 +55,21 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__social social">
-        <ul class="social__list">
+        <ul class="list social__list">
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="#"
+            <a class="link social__link social__link--instagram" href="#"
               aria-label="Переход на страницу магазина «Мишка» в instagram">
               <img class="social__icon" src="img/instagramm.png" width="22" height="21" alt="Логотип instagram">
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="#"
+            <a class="link social__link social__link--facebook" href="#"
               aria-label="Переход на страницу магазина «Мишка» в facebook">
               <img class="social__icon" src="img/fb.png" width="15" height="28" alt="Логотип facebook">
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="#"
+            <a class="link social__link social__link--twitter" href="#"
               aria-label="Переход на страницу магазина «Мишка» в twitter">
               <img class="social__icon" src="img/twitter.png" width="23" height="20" alt="Логотип twitter">
             </a>
@@ -77,7 +78,7 @@
       </div>
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="link copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <img class="copyright__icon" src="img/htmlacademy-logo.svg" width="27" height="35"
             alt="Переход на страницу интенсива «Адаптивная верстка и автоматизация» htmlacademy">
         </a>
