@@ -1,0 +1,32 @@
+.blank {
+  background-color: @bg-grey;
+}
+
+.blank__container {
+  width: 320px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.blank__img {
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .blank__container {
+    width: 668px;
+  }
+
+  .blank__img {
+    object-fit: cover;
+    width: 668px;
+    height: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .blank__container {
+    width: 1050px;
+  }
+}

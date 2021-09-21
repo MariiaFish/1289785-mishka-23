@@ -1,5 +1,31 @@
-.feedback__wrapper {
+.feedback {
+  position: relative;
+  padding-bottom: 51px;
   margin-bottom: 38px;
+}
+
+.feedback::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-image: url("../img/zigzag-line.svg");
+  background-repeat: repeat-x;
+}
+
+.feedback__title {
+  font-size: 25px;
+  margin-bottom: 14px;
+}
+
+.feedback__item {
+  margin-bottom: 27px;
+}
+
+.feedback__paragraph {
+  margin-bottom: 29px;
 }
 
 .feedback__text {
@@ -20,4 +46,132 @@
 
 .feedback__user-nickname {
   font-size: 17px;
+  line-height: 29px;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback {
+    padding-bottom: 107px;
+    margin-bottom: 69px;
+    background-image: url("../img/lace-doily-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/lace-doily-tablet@2x.jpg");
+      background-size: 350px auto;
+    }
+  }
+
+  .feedback::after {
+    height: 17px;
+    background-image: url("../img/zigzag-line-tablet.svg");
+  }
+
+  .feedback__container {
+    position: relative;
+  }
+
+  .feedback__title {
+    font-size: 43px;
+    line-height: 50px;
+    padding-top: 84px;
+    margin-bottom: 39px;
+  }
+
+  .feedback__paragraph {
+    margin-bottom: 60px;
+  }
+
+  .feedback__text {
+    font-size: 17px;
+    padding-left: 0;
+  }
+
+  .feedback__user {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feedback__user-name {
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+
+  .feedback__button {
+    position: absolute;
+    top: 81px;
+    right: 0;
+    width: 175px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback {
+    background-image: none;
+    padding-bottom: 90px;
+    margin-bottom: 71px;
+  }
+
+  .feedback::after {
+    display: none;
+  }
+
+  .feedback__wrapper {
+    position: relative;
+    background-image: url("../img/lace-doily-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 350px 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/lace-doily-tablet@2x.jpg");
+      background-size: 350px auto;
+    }
+  }
+
+  .feedback__wrapper::after {
+    position: absolute;
+    content: "";
+    bottom: -90px;
+    left: 0;
+    width: 100%;
+    height: 23px;
+    background-image: url("../img/zigzag-line-desktop.svg");
+    background-repeat: no-repeat;
+  }
+
+  .feedback__container {
+    padding-bottom: 96px;
+    margin-left: 175px;
+  }
+
+  .feedback__title {
+    font-size: 53px;
+    line-height: 57px;
+    margin-bottom: 35px;
+    padding-top: 79px;
+  }
+
+  .feedback__item {
+    margin-bottom: 0;
+  }
+
+  .feedback__paragraph {
+    margin-bottom: 43px;
+    width: 806px;
+    padding-left: 0;
+  }
+
+  .feedback__button {
+    top: 80px;
+  }
+
+  .feedback__user {
+    width: 271px;
+  }
+
+  .feedback__user-name {
+    font-size: 17px;
+  }
 }

@@ -1,7 +1,52 @@
 .order__wrapper {
-  border: 1px solid @border-grey;
+  font-size: 15px;
+  line-height: 24px;
+  padding-top: 22px;
+  padding-bottom: 26px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid @border-grey;
+  margin-right: 28px;
 }
 
 .order__button {
   border: none;
+}
+
+.order__button:hover svg {
+  fill: @bg-tiffany;
+}
+
+.order__button:active svg {
+  opacity: 0.3;
+}
+
+.order__button:focus svg {
+  fill: @bg-dark-tiffany;
+}
+
+@media (min-width: @tablet-width) {
+  .order {
+    justify-self: end;
+  }
+
+  .order__wrapper {
+    padding-top: 23px;
+    font-size: 17px;
+    padding-bottom: 25px;
+  }
+
+  .order__button {
+    padding-right: 4px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order__wrapper {
+    padding-bottom: 26px;
+  }
+
+  .order__button {
+    padding-right: 0;
+  }
 }

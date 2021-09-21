@@ -1,4 +1,47 @@
 .page-body {
-  min-width: 320px;
+  margin: 0;
   min-height: 100%;
+}
+
+.page-body__container {
+  width: 260px;
+  margin: 0 auto;
+}
+
+.page-body__button {
+  width: 260px;
+  min-height: 52px;
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.page-body__button:hover {
+  background-color: @bg-wet-asphalt;
+  color: @text-color-white;
+}
+
+.page-body__button:focus {
+  background-color: @bg-wet-asphalt;
+  color: @text-color-white;
+}
+
+.page-body__button:active {
+  color: @text-spetial-white;
+}
+
+@media (min-width: @tablet-width) {
+  .page-body__container {
+    width: 668px;
+  }
+
+  .page-body__button {
+    width: 292px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-body__container {
+    width: 1050px;
+  }
 }

@@ -1,6 +1,104 @@
 .title {
   .reset-indent();
+}
+
+.title--general {
   font-size: 27px;
   line-height: 30px;
   color: @text-color-black;
+}
+
+.title--fieldset {
+  position: relative;
+  font-size: 16px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: @text-color-tiffany;
+  margin-bottom: 33px;
+}
+
+.title--fieldset-color {
+  margin-bottom: 23px;
+}
+
+.title--fieldset-user-name {
+  margin-bottom: 29px;
+}
+
+.title--fieldset-addition {
+  margin-bottom: 22px;
+}
+
+.title--fieldset-special {
+  position: relative;
+  font-size: 16px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: @text-color-tiffany;
+  margin-bottom: 4px;
+}
+
+.title--fieldset::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 9px;
+  width: 200px;
+  height: 1px;
+  background-color: @form-elements-color;
+}
+
+.title--centerman {
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .title--general {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .title--fieldset {
+    font-size: 17px;
+    line-height: 16px;
+    margin-bottom: 0;
+    align-self: flex-start;
+    padding-top: 19px;
+    padding-left: 2px;
+  }
+
+  .title--fieldset-user-name {
+    padding-top: 0;
+  }
+
+  .title--fieldset-color {
+    align-self: flex-start;
+    margin-bottom: 0;
+    padding-top: 15px;
+  }
+
+  .title--fieldset::after {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .title--general {
+    font-size: 53px;
+    line-height: 57px;
+    margin: auto;
+  }
+
+  .title--fieldset,
+  .title--fieldset-special {
+    margin-left: 64px;
+  }
+
+  .title--fieldset-color {
+    padding-top: 15px;
+  }
+
+  .title--fieldset-user-name {
+    padding-top: 8px;
+  }
 }

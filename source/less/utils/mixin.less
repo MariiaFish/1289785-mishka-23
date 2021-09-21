@@ -1,6 +1,10 @@
-.reset-indent {
+.reset-indent() {
   margin: 0;
   padding: 0;
+}
+
+.reset-border() {
+  border: none;
 }
 
 .reset-list {
@@ -8,6 +12,14 @@
   list-style: none;
 }
 
-.reset-color(@color) {
+.reset-color (@color) {
   color: @color;
+}
+
+.reset-fieldset {
+  .reset-border();
+}
+
+.centerman () {
+  margin: 0 auto;
 }

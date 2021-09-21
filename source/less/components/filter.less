@@ -2,14 +2,46 @@
   font-size: 15px;
   line-height: 30px;
   font-weight: 400;
+  .centerman();
+  margin-bottom: 22px;
 }
 
 .filter__fieldset {
   border: none;
 }
 
+.filter__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 31px;
+}
+
+.filter__item {
+  display: flex;
+  justify-content: center;
+  width: 81px;
+  min-height: 52px;
+  border: 2px solid @border-modal-filter;
+}
+
+.filter__item:hover {
+  border: 2px solid @border-modal-filter-hover;
+}
+
+.filter__item:active {
+  border: 2px solid @border-tiffany;
+}
+
 .filter__radio-label {
+  padding-top: 17px;
+  padding-bottom: 17px;
   font-size: 17px;
   line-height: 16px;
   color: @text-color-wet-asphalt;
+}
+
+@media (min-width: @tablet-width) {
+  .filter__item {
+    width: 112px;
+  }
 }

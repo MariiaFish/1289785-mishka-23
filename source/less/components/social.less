@@ -1,0 +1,26 @@
+.social__list {
+  width: 142px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.social__button:hover svg {
+  fill: @fill-icon-emerald;
+}
+
+.social__button:focus svg {
+  fill: @fill-icon-emerald;
+}
+
+.social__button:active svg {
+  opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .social__list {
+    justify-content: space-between;
+  }
+}

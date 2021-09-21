@@ -1,3 +1,51 @@
-.page-header__wrapper {
-  border-bottom: 1px solid @border-grey;
+.page-header {
+  z-index: 1;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.page-header__container {
+  margin: 0 auto;
+  width: 260px;
+}
+
+.page-header__container:hover,
+.page-header__container:focus {
+  opacity: 0.6;
+}
+
+.page-header__container:active {
+  opacity: 0.3;
+}
+
+.page-header--modal-mode {
+  z-index: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    border-bottom: 1px solid @border-grey;
+  }
+
+  .page-header__wrapper {
+    display: grid;
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  .page-header__container {
+    margin: 0;
+    width: fit-content;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    min-height: 89px;
+  }
+
+  .page-header__wrapper {
+    width: 1050px;
+  }
 }

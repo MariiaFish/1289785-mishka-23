@@ -1,15 +1,56 @@
-.catalog-nav__wrapper {
-  display: inline-block;
-  width: 100%;
-  height: 373px;
+.catalog-nav {
   background-color: @page-main-bg-grey;
-  background-image: url("../img/toy-house.png");
+  background-image: url("../img/toy-house.jpg");
+  background-position-x: center;
+  background-position-y: -6px;
   background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/toy-house@2x.jpg");
+    background-size: 320px auto;
+  }
+}
+
+.catalog-nav__wrapper {
+  width: 100%;
+  margin-bottom: 31px;
+  padding-top: 73px;
+}
+
+.catalog-nav__title {
+  margin-bottom: 120px;
 }
 
 .catalog-nav__list {
   font-size: 19px;
   line-height: 24px;
+}
+
+.catalog-nav__item {
+  position: relative;
+}
+
+.catalog-nav__link {
+  display: block;
+  padding: 0 30px;
+  min-height: 103px;
+  padding-top: 24px;
+}
+
+.catalog-nav__interier:hover {
+  box-shadow: 0 -5px 0 0 @bg-tiffany;
+}
+
+.catalog-nav__toys:hover {
+  box-shadow: 0 -5px 0 0 @bg-dark-tiffany;
+}
+
+.catalog-nav__toys:hover .catalog-nav__item-title {
+  transform: translateY(-5px);
+}
+
+.catalog-nav__interier:hover .catalog-nav__item-title {
+  transform: translateY(-5px);
 }
 
 .catalog-nav__interier {
@@ -18,4 +59,191 @@
 
 .catalog-nav__toys {
   background-color: @bg-dark-tiffany;
+}
+
+.catalog-nav__item-title {
+  display: block;
+  width: 130px;
+}
+
+.catalog-nav__item--toys::after {
+  position: absolute;
+  content: "";
+  right: 27px;
+  top: 21px;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/constructor.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.5;
+}
+
+.catalog-nav__item--interier::after {
+  position: absolute;
+  content: "";
+  right: 36px;
+  top: 23px;
+  width: 40px;
+  height: 62px;
+  background-image: url("../img/lamp.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.5;
+}
+
+.catalog-nav__item--toys:hover::after,
+.catalog-nav__item--interier:hover::after {
+  opacity: 0.7;
+  transform: translateY(-5px);
+}
+
+.catalog-nav__item--toys:hover .catalog-nav__toys {
+  box-shadow: 0 -5px 0 0 @bg-dark-tiffany;
+}
+
+.catalog-nav__item--toys:hover .catalog-nav__item-title {
+  transform: translateY(-5px);
+}
+
+.catalog-nav__item--interier:hover .catalog-nav__interier {
+  box-shadow: 0 -5px 0 0 @bg-tiffany;
+}
+
+.catalog-nav__item--interier:hover .catalog-nav__item-title {
+  transform: translateY(-5px);
+}
+
+.catalog-nav__item--toys:focus::after,
+.catalog-nav__item--interier:focus::after {
+  opacity: 0.7;
+}
+
+.catalog-nav__item--toys:active::after,
+.catalog-nav__item--interier:active::after {
+  opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-nav {
+    position: relative;
+    background-position-y: -3px;
+    background-image: url("../img/toy-house-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/toy-house-tablet@2x.jpg");
+      background-size: 769px auto;
+    }
+  }
+
+  .catalog-nav::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background-image: url("../img/zigzag-fill-tablet.svg");
+  }
+
+  .catalog-nav__wrapper {
+    width: 668px;
+    margin: 0 auto 52px auto;
+    padding-top: 155px;
+  }
+
+  .catalog-nav__title {
+    margin-bottom: 372px;
+  }
+
+  .catalog-nav__item-title--toys::after {
+    right: 34px;
+    top: 30px;
+  }
+
+  .catalog-nav__item-title--interier::after {
+    right: 36px;
+    top: 29px;
+  }
+
+  .catalog-nav__list {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .catalog-nav__item {
+    min-height: 119px;
+    width: 334px;
+  }
+
+  .catalog-nav__link {
+    min-height: 119px;
+    padding-top: 0;
+  }
+
+  .catalog-nav__item-title {
+    width: 131px;
+    padding-top: 25px;
+    padding-left: 8px;
+  }
+
+  .catalog-nav__item--toys::after {
+    right: 33px;
+    top: 29px;
+  }
+
+  .catalog-nav__item--interier::after {
+    top: 28px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-nav {
+    background-image: url("../img/toy-house-desktop.jpg");
+    margin-top: 80px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/toy-house-desktop@2x.jpg");
+      background-size: 1150px auto;
+    }
+  }
+
+  .catalog-nav::after {
+    left: 4px;
+    bottom: -6px;
+    width: 100%;
+    height: 24px;
+    background-position-x: center;
+    background-image: url("../img/zigzag-fill-desktop.svg");
+  }
+
+  .catalog-nav__item--toys::after {
+    right: 31px;
+    top: 29px;
+  }
+
+  .catalog-nav__item--interier::after {
+    top: 28px;
+  }
+
+  .catalog-nav__wrapper {
+    width: 1050px;
+    padding-top: 157px;
+    margin-bottom: 54px;
+  }
+
+  .catalog-nav__title {
+    margin-bottom: 356px;
+  }
+
+  .catalog-nav__item {
+    width: 525px;
+  }
+
+  .catalog-nav__item-title {
+    padding-top: 24px;
+    padding-left: 6px;
+  }
 }

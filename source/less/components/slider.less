@@ -1,0 +1,76 @@
+.slider__buttons {
+  display: flex;
+  min-height: 52px;
+  margin-bottom: 38px;
+}
+
+.slider__button {
+  position: relative;
+  border: 1px solid @border-grey;
+  width: 130px;
+  cursor: pointer;
+}
+
+.slider__button--next::before {
+  position: absolute;
+  content: "";
+  top: 12px;
+  left: 37px;
+  width: 50px;
+  height: 26px;
+  background-image: url("../img/arrow.png");
+  background-repeat: no-repeat;
+}
+
+.slider__button--previous::before {
+  position: absolute;
+  content: "";
+  top: 12px;
+  left: 37px;
+  width: 50px;
+  height: 26px;
+  transform: rotate(180deg);
+  background-image: url("../img/arrow.png");
+  background-repeat: no-repeat;
+}
+
+.slider__button--next:hover::before,
+.slider__button--previous:hover::before {
+  opacity: 0.6;
+}
+
+.slider__button--next:active::before,
+.slider__button--previous:active::before {
+  opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .slider__buttons {
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+    margin-bottom: 0;
+  }
+
+  .slider__button--next::before {
+    top: -2px;
+    left: 1px;
+  }
+
+  .slider__button--previous::before {
+    top: -2px;
+    left: 1px;
+  }
+
+  .slider__button {
+    width: 88px;
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider__buttons {
+    bottom: 82px;
+    right: -20px;
+  }
+}

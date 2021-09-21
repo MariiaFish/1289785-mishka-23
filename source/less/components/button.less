@@ -1,8 +1,33 @@
 .button {
+  display: block;
   font-size: 18px;
   line-height: 20px;
   text-transform: uppercase;
   color: @text-color-wet-asphalt;
-  border: 2px solid @boreder-wet-asphalt;
+  border: 2px solid @border-wet-asphalt;
   font-weight: 700;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button--form {
+  font-size: 17px;
+  line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    font-size: 17px;
+  }
+
+  .button--form {
+    width: 230px;
+    margin-right: 108px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button--form {
+    margin-right: 139px;
+  }
 }

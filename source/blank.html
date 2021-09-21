@@ -3,88 +3,153 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Страница не найдена</title>
-  <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Интернет-магазин «Мишка»</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/favicon-apple-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
-<body class="page__body grid grid__body">
-  <header class="page__header">
-    <a class="link page__logo" href="index.html" aria-label="Переход на главную страницу">
-      <img src="img/mishka-logo.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <div class="main-nav__wrapper">
-        <ul class="list main-nav__list">
-          <li class="main-nav__item">
-            <a class="link" href="catalog.html">Каталог товаров</a>
+<body class="page-body">
+  <header class="page-header">
+    <!-- page-header--modal-mode Добавляется в режиме модального окна -->
+    <div class="page-header__wrapper">
+      <div class="logo">
+        <div class="page-header__container">
+          <a class="link logo__link" href="index.html">
+            <picture>
+              <source media="(min-width: 1050px)" srcset="img/mishka-logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+              <img class="logo__img" src="img/mishka-logo.svg" width="86" height="35"
+                alt="Логотип интернет-магазина «Мишка»">
+            </picture>
+          </a>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <!--
+            main-nav--opened Появляется иконка крестик для режима с java script в mobile
+            main-nav--closed  Появляется иконка бургер-меню для режима с java script в mobile
+          -->
+        <button class="main-nav__toggle" type="button">
+        </button>
+        <!-- main-nav__toggle--nojs  Режим без java script для кнопки-->
+        <ul class="list  main-nav__list main-nav__list--nojs">
+          <!--
+                main-nav__list--opened Меню открыто для режима с java script в mobile
+                main-nav__list Меню закрыто состояние по умолчанию для режима с java script в mobile
+                main-nav__list--nojs Режим без java script для меню навигации в mobile-версии
+            -->
+          <li class="main-nav__item main-nav__item-catalog">
+            <div class="page-header__container">
+              <a class="link main-nav__link main-nav__link-catalog" href="catalog.html">Каталог товаров</a>
+            </div>
           </li>
-          <li class="main-nav__item">
-            <a class="link" href="form.html">Вязание на заказ</a>
+          <li class="main-nav__item main-nav__item-order-form">
+            <div class="page-header__container">
+              <a class="link main-nav__link main-nav__link-order-form" href="form.html">Вязание на заказ</a>
+            </div>
           </li>
-          <li class="main-nav__item main-nav__item--search">
-            <form class="search-form" action="#" method="GET">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.2"
-                  d="M17.6932 16.0568L14.2159 12.5795C15.2386 11.25 15.75 9.61364 15.75 7.875C15.75 3.47727 12.2727 0 7.875 0C3.47727 0 0 3.47727 0 7.875C0 12.2727 3.47727 15.75 7.875 15.75C9.61364 15.75 11.25 15.1364 12.5795 14.2159L16.0568 17.6932C16.2614 17.8977 16.4659 18 16.875 18C17.4886 18 18 17.4886 18 16.875C18 16.6705 17.8977 16.3636 17.6932 16.0568ZM2.25 7.875C2.25 4.80682 4.80682 2.25 7.875 2.25C10.9432 2.25 13.5 4.80682 13.5 7.875C13.5 10.9432 10.9432 13.5 7.875 13.5C4.80682 13.5 2.25 10.9432 2.25 7.875Z"
-                  fill="black" />
-              </svg>
-              <input class="search-form__input input" type="search" placeholder="Поиск по сайту" id="search-input">
-              <label class="search-form__input-lable" for="search-input">Поиск по сайту</label>
-            </form>
+          <li class="main-nav__item main-nav__tablet main-nav__item-free-shipping">
+            <div class="page-header__container">
+              <p class="paragraph main-nav__link main-nav__link-free-shipping">Бесплатная доставка по России</p>
+            </div>
           </li>
-          <li class="main-nav__item main-nav__item--cart">
-            <a class="link" href="#">
-              <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.2"
-                  d="M20.1884 6.85716H16.6377L13.1884 0.380944C12.9855 -8.61287e-06 12.5797 -0.0952351 12.1739 0.0952412C11.7681 0.285717 11.6667 0.66667 11.8696 1.04762L15.0145 6.85716H5.7826L8.92753 1.04762C9.13043 0.66667 8.92754 0.285717 8.6232 0.0952412C8.2174 -0.0952351 7.8116 0.0952295 7.6087 0.380944L4.1594 6.85716H0.811583C0.405785 6.85716 0 7.14286 0 7.61905C0 8 0.304336 8.38094 0.811583 8.38094H1.01449L1.92753 11.2381C1.72463 11.3333 1.62317 11.5238 1.62317 11.8095C1.62317 12.1905 1.92753 12.4762 2.33332 12.4762L4.05797 18H16.942L18.6667 12.4762C19.0725 12.4762 19.3768 12.1905 19.3768 11.8095C19.3768 11.619 19.2754 11.3333 19.0725 11.2381L19.9855 8.38094H20.1884C20.5942 8.38094 21 8.09524 21 7.61905C21 7.14286 20.5942 6.85716 20.1884 6.85716ZM15.6232 16.4762H5.07247L3.85506 12.381H16.942L15.6232 16.4762ZM17.2464 10.9524H3.34782L2.53623 8.28573H18.058L17.2464 10.9524Z"
-                  fill="black" />
-              </svg>
-              Корзина: пока пуста
-            </a>
+          <li class="main-nav__item main-nav__item-search">
+            <div class="page-header__container">
+              <form class="main-nav__link main-nav__search-form" action="#" method="GET">
+                <svg class="main-nav__search-icon" width="18" height="18" fill="#D9D9D9" viewBox="0 0 18 18"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+                <input class="input input--search-form" type="search" placeholder="Поиск по сайту" id="search-input">
+                <label class="label label--search-form" for="search-input">Поиск по сайту</label>
+              </form>
+            </div>
+          </li>
+          <li class="main-nav__item main-nav__item-cart">
+            <div class="page-header__container">
+              <a class="link main-nav__link main-nav__cart-link" href="#">
+                <svg class="main-nav__cart-icon" width="21" height="18" fill="#D9D9D9" viewBox="0 0 21 18"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#cart"></use>
+                </svg>
+                Корзина: пока пуста
+              </a>
+            </div>
+          </li>
+          <li class="main-nav__item main-nav__desktop main-nav__item-new">
+            <div class="page-header__container">
+              <a class="link main-nav__link main-nav__link-new" href="#">Новые поступления</a>
+            </div>
+          </li>
+          <li class="main-nav__item main-nav__desktop main-nav__item-sale">
+            <div class="page-header__container">
+              <a class="link main-nav__link main-nav__link-sale" href="#">Распродажа</a>
+            </div>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
+
   </header>
 
-  <main>
-    <img src="img/not-found-page.png" alt="Страница не найдена">
+
+  <main class="blank">
+    <div class="blank__container">
+      <img class="blank__img" width="320" height="300" src="img/not-found-page.png" alt="Страница не найдена">
+    </div>
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__wrapper">
+    <div class="page-body__container page-footer__wrapper">
+      <a class="link page-footer__logo" href="index.html">
+        <svg width="102" height="34" viewBox="0 0 102 34" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite.svg#mishka-logo-footer"></use>
+        </svg>
+      </a>
       <div class="page-footer__social social">
         <ul class="list social__list">
           <li class="social__item">
-            <a class="link social__link social__link--instagram" href="#"
+            <a class="link social__button social__button--instagram" href="#"
               aria-label="Переход на страницу магазина «Мишка» в instagram">
-              <img class="social__icon" src="img/instagramm.png" width="22" height="21" alt="Логотип instagram">
+              <svg width="22" height="21" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#insta"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="link social__link social__link--facebook" href="#"
+            <a class="link social__button social__button--facebook" href="#"
               aria-label="Переход на страницу магазина «Мишка» в facebook">
-              <img class="social__icon" src="img/fb.png" width="15" height="28" alt="Логотип facebook">
+              <svg width="15" height="28" viewBox="0 0 15 28" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#fb"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="link social__link social__link--twitter" href="#"
+            <a class="link social__button social__button--twitter" href="#"
               aria-label="Переход на страницу магазина «Мишка» в twitter">
-              <img class="social__icon" src="img/twitter.png" width="23" height="20" alt="Логотип twitter">
+              <svg width="23" height="20" viewBox="0 0 23 20" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#twitter"></use>
+              </svg>
             </a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="link copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__icon" src="img/htmlacademy-logo.svg" width="27" height="35"
-            alt="Переход на страницу интенсива «Адаптивная верстка и автоматизация» htmlacademy">
+        <b class="copyright__text">Разработано</b>
+        <a class="link copyright__link" href="https://htmlacademy.ru/intensive/adaptive"
+          aria-label="Переход на страницу интенсива «Адаптивная верстка и автоматизация» htmlacademy">
+          <svg width="27" height="35" viewBox="0 0 27 35" fill="#63D1BB" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
+          </svg>
         </a>
       </div>
     </div>
   </footer>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
