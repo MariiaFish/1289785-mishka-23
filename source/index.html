@@ -24,12 +24,13 @@
             <picture>
               <source media="(min-width: 1050px)" srcset="img/mishka-logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
-              <img class="logo__img" src="img/mishka-logo.svg" width="86" height="35" alt="Логотип интернет-магазина «Мишка»">
+              <img class="logo__img" src="img/mishka-logo.svg" width="86" height="35"
+                alt="Логотип интернет-магазина «Мишка»">
             </picture>
           </a>
         </div>
       </div>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed">
         <!--
           main-nav--opened Появляется иконка крестик для режима с java script в mobile
           main-nav--closed  Появляется иконка бургер-меню для режима с java script в mobile
@@ -37,7 +38,7 @@
         <button class="main-nav__toggle" type="button">
         </button>
         <!-- main-nav__toggle--nojs  Режим без java script для кнопки-->
-        <ul class="list  main-nav__list main-nav__list--nojs">
+        <ul class="list  main-nav__list">
           <!--
               main-nav__list--opened Меню открыто для режима с java script в mobile
               main-nav__list Меню закрыто состояние по умолчанию для режима с java script в mobile
@@ -208,7 +209,9 @@
             <ul class="list feedback__list slider__list">
               <li class="feedback__item slider__item feedback__item--current">
                 <p class="paragraph feedback__paragraph feedback__text feedback__text--feedback">Я молодая мама, но всё
-                  равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                  равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В
+                  отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а
+                  также набирают больше лайков!</p>
                 <div class="feedback__user">
                   <span class="feedback__user-name">Анастасия Красильникова</span>
                   <span class="feedback__user-nickname feedback__text feedback__text--feedback">@misssssiskras</span>
@@ -282,20 +285,22 @@
             <iframe class="contacts__iframe"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2s!4v1631486732563!5m2!1sen!2s"
               allowfullscreen="" loading="lazy"></iframe>
-              <div class="contacts__map-picture">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)"
-                    srcset="img/adress-on-map-desktop.webp 1x, img/adress-on-map-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/adress-on-map-tablet.webp 1x, img/adress-on-map-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/adress-on-map.webp 1x, img/adress-on-map@2x.webp 2x">
-                  <source media="(min-width: 1150px)" srcset="img/adress-on-map-desktop.jpg, img/adress-on-map-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/adress-on-map-tablet.jpg, img/adress-on-map-tablet@2x.jpg 2x">
-                  <source media="(min-resolution: 2dppx)" srcset="img/adress-on-map@2x.jpg">
-                  <img class="contacts__map-image" src="img/adress-on-map.jpg" width="320" height="455"
-                    alt="Расположение адреса магазина на карте г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
-                </picture>
-              </div>
+            <div class="contacts__map-picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/adress-on-map-desktop.webp 1x, img/adress-on-map-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/adress-on-map-tablet.webp 1x, img/adress-on-map-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/adress-on-map.webp 1x, img/adress-on-map@2x.webp 2x">
+                <source media="(min-width: 1150px)"
+                  srcset="img/adress-on-map-desktop.jpg, img/adress-on-map-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/adress-on-map-tablet.jpg, img/adress-on-map-tablet@2x.jpg 2x">
+                <source media="(min-resolution: 2dppx)" srcset="img/adress-on-map@2x.jpg">
+                <img class="contacts__map-image" src="img/adress-on-map.jpg" width="320" height="455"
+                  alt="Расположение адреса магазина на карте г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
+              </picture>
+            </div>
           </div>
         </div>
       </section>
@@ -310,34 +315,34 @@
           <use xlink:href="img/sprite.svg#mishka-logo-footer"></use>
         </svg>
       </a>
-        <div class="page-footer__social social">
-          <ul class="list social__list">
-            <li class="social__item">
-              <a class="link social__button social__button--instagram" href="#"
-                aria-label="Переход на страницу магазина «Мишка» в instagram">
-                <svg width="22" height="21" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#insta"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="link social__button social__button--facebook" href="#"
-                aria-label="Переход на страницу магазина «Мишка» в facebook">
-                <svg width="15" height="28" viewBox="0 0 15 28" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#fb"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="link social__button social__button--twitter" href="#"
-                aria-label="Переход на страницу магазина «Мишка» в twitter">
-                <svg width="23" height="20" viewBox="0 0 23 20" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div class="page-footer__social social">
+        <ul class="list social__list">
+          <li class="social__item">
+            <a class="link social__button social__button--instagram" href="#"
+              aria-label="Переход на страницу магазина «Мишка» в instagram">
+              <svg width="22" height="21" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="link social__button social__button--facebook" href="#"
+              aria-label="Переход на страницу магазина «Мишка» в facebook">
+              <svg width="15" height="28" viewBox="0 0 15 28" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="link social__button social__button--twitter" href="#"
+              aria-label="Переход на страницу магазина «Мишка» в twitter">
+              <svg width="23" height="20" viewBox="0 0 23 20" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
         <a class="link copyright__link" href="https://htmlacademy.ru/intensive/adaptive"
@@ -360,8 +365,8 @@
             <legend class="filter__legend">Выберите размер:</legend>
             <ul class="list filter__list">
               <li class="filter__item filter__item--h-size">
-                <input class="visually-hidden filter__input filter__input-radio filter__input checked" type="radio" name="size"
-                  id="h-size" checked>
+                <input class="visually-hidden filter__input filter__input-radio filter__input checked" type="radio"
+                  name="size" id="h-size" checked>
                 <label class="filter__label filter__radio-label" for="h-size">S</label>
               </li>
               <li class="filter__item filter__item--m-size">
