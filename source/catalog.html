@@ -134,9 +134,10 @@
                 <div class="order">
                   <div class="order__wrapper">
                     <p class="paragraph order-price product__paragraph">1 200 руб.</p>
-                    <a class="link button order__button" href="#" aria-label="Выборать размер и добавить в корзину">
-                      <svg width="20" height="19" viewBox="0 0 21 18" fill="#D9D9D9" xmlns="http://www.w3.org/2000/svg"
-                        aria-label="Выбор размера и обавление товара в корзину">
+                    <a class="link button order__button button--add-to-car" href="#"
+                      aria-label="Выборать размер и добавить в корзину">
+                      <svg class="button--add-to-car" width="20" height="19" viewBox="0 0 21 18" fill="#D9D9D9"
+                        xmlns="http://www.w3.org/2000/svg" aria-label="Выбор размера и обавление товара в корзину">
                         <use xlink:href="img/sprite.svg#cart"></use>
                       </svg>
                     </a>
@@ -172,9 +173,10 @@
                 <div class="order">
                   <div class="order__wrapper">
                     <p class="paragraph product__paragraph order-price">690 руб.</p>
-                    <a class="link button order__button" href="#" aria-label="Выборать размер и добавить в корзину">
-                      <svg width="20" height="19" viewBox="0 0 21 18" fill="#D9D9D9" xmlns="http://www.w3.org/2000/svg"
-                        aria-label="Выбор размера и обавление товара в корзину">
+                    <a class="link button order__button button--add-to-car" href="#"
+                      aria-label="Выборать размер и добавить в корзину">
+                      <svg class="button--add-to-car" width="20" height="19" viewBox="0 0 21 18" fill="#D9D9D9"
+                        xmlns="http://www.w3.org/2000/svg" aria-label="Выбор размера и обавление товара в корзину">
                         <use xlink:href="img/sprite.svg#cart"></use>
                       </svg>
                     </a>
@@ -210,9 +212,10 @@
                 <div class="order">
                   <div class="order__wrapper">
                     <p class="paragraph product__paragraph order-price">1 500 руб.</p>
-                    <a class="link button order__button" href="#" aria-label="Выборать размер и добавить в корзину">
-                      <svg width="20" height="19" viewBox="0 0 21 18" fill="#D9D9D9" xmlns="http://www.w3.org/2000/svg"
-                        aria-label="Выбор размера и обавление товара в корзину">
+                    <a class="link button order__button button--add-to-car" href="#"
+                      aria-label="Выборать размер и добавить в корзину">
+                      <svg class="button--add-to-car" width="20" height="19" viewBox="0 0 21 18" fill="#D9D9D9"
+                        xmlns="http://www.w3.org/2000/svg" aria-label="Выбор размера и обавление товара в корзину">
                         <use xlink:href="img/sprite.svg#cart"></use>
                       </svg>
                     </a>
@@ -299,38 +302,40 @@
     </div>
   </footer>
 
-  <section class="modal modal--off">
-    <!-- modal--off  Отключает режим модального окна -->
-    <div class="modal__window">
-      <div class="modal__window-container">
-        <p class="paragraph paragraph--modal modal__title">Добавить в корзину</p>
-        <form class="filter" method="POST" action="#">
-          <fieldset class="fieldset filter__fieldset">
-            <legend class="filter__legend">Выберите размер:</legend>
-            <ul class="list filter__list">
-              <li class="filter__item filter__item--h-size">
-                <input class="visually-hidden filter__input filter__input-radio filter__input" type="radio" name="size"
-                  id="h-size" checked>
-                <label class="filter__label filter__radio-label" for="h-size">H</label>
-              </li>
-              <li class="filter__item filter__item--m-size">
-                <input class="visually-hidden filter__input filter__input-radio filter__input" type="radio" name="size"
-                  id="m-size">
-                <label class="filter__label filter__radio-label" for="m-size">M</label>
-              </li>
-              <li class="filter__item filter__item--l-size">
-                <input class="visually-hidden filter__input filter__input-radio filter__input" type="radio" name="size"
-                  id="l-size">
-                <label class="filter__label filter__radio-label" for="l-size">L</label>
-              </li>
-            </ul>
-          </fieldset>
-          <button class="button page-body__button modal__button" type="submit">Добавить</button>
-        </form>
+  <template id="modal">
+    <section class="modal">
+      <!-- modal--off  Отключает режим модального окна -->
+      <div class="modal__window">
+        <div class="modal__window-container">
+          <p class="paragraph paragraph--modal modal__title">Добавить в корзину</p>
+          <form class="filter" method="POST" action="#">
+            <fieldset class="fieldset filter__fieldset">
+              <legend class="filter__legend">Выберите размер:</legend>
+              <ul class="list filter__list">
+                <li class="filter__item filter__item--h-size">
+                  <input class="visually-hidden filter__input filter__input-radio filter__input checked" type="radio"
+                    name="size" id="h-size" checked>
+                  <label class="filter__label filter__radio-label" for="h-size">S</label>
+                </li>
+                <li class="filter__item filter__item--m-size">
+                  <input class="visually-hidden filter__input filter__input-radio filter__input" type="radio"
+                    name="size" id="m-size">
+                  <label class="filter__label filter__radio-label" for="m-size">M</label>
+                </li>
+                <li class="filter__item filter__item--l-size">
+                  <input class="visually-hidden filter__input filter__input-radio filter__input" type="radio"
+                    name="size" id="l-size">
+                  <label class="filter__label filter__radio-label" for="l-size">L</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button page-body__button modal__button" type="submit">Добавить</button>
+          </form>
+        </div>
       </div>
-    </div>
-    <div class="modal__overlay"></div>
-  </section>
+      <div class="modal__overlay"></div>
+    </section>
+  </template>
 
   <script src="js/script.min.js"></script>
 </body>
